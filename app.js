@@ -7,7 +7,7 @@ const app = express();
 // Middlewares
 app.use(express.json());
 app.use(cors());
-app.use("/books", router); // localhost:5000/books
+app.use("/books", router); 
 
 mongoose.connect("mongodb+srv://admin:pM5bfCo7JmV8yAqD@cluster0.f5kt4.mongodb.net/BookList?retryWrites=true&w=majority").then(()=>console.log("Connected to database")).then(()=>{
     app.listen(5000);
